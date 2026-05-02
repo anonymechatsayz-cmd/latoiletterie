@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Toiletterie | Toilettage canin et félin à Nozay (91620)</title>
+    <meta name="description" content="Le bien-être de votre compagnon entre de bonnes mains. Prenez rendez-vous pour un toilettage sans stress à Nozay.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #B0653C;
+            --primary-hover: #985530;
+            --dark: #2C1E16;
+            --accent: #F59E0B;
+            --neutral: #FAF7F2;
+            --white: #FFFFFF;
+            --shadow: 0 8px 40px rgba(0,0,0,0.08);
+            --shadow-primary: 0 12px 32px rgba(176,101,60,0.25);
+            --radius: 20px;
+            --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --max-w: 1200px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--neutral);
+            color: var(--dark);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.15;
+            color: var(--dark);
+        }
+
+        p {
+            max-width: 65ch;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Accessibilité */
+        .skip-to-content {
+            position: absolute;
+            top: -48px;
+            left: 0;
+            background: var(--white);
+            color: var(--dark);
+            padding: 16px;
+            z-index: 100;
+            opacity: 0;
+            transition: top var(--transition), opacity var(--transition);
+            font-weight: 500;
+        }
+        .skip-to-content:focus {
+            top: 0;
+            opacity: 1;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(250, 247, 242, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(176,101,60,0.1);
+            z-index: 50;
+            padding: 16px 0;
+            transition: padding var(--transition);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+        @media (min-width: 768px) {
+            .logo { font-size: 30px; }
+        }
+        
+        .nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--neutral);
+            padding: 24px;
+            border-bottom: 1px solid rgba(176,101,60,0.1);
+            gap: 16px;
+            font-weight: 500;
+        }
+        .nav.active {
+            display: flex;
+        }
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                background: none;
+                padding: 0;
+                border: none;
+                gap: 32px;
+            }
+            .nav a {
+                position: relative;
+                padding: 4px 0;
+            }
+            .nav a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: var(--primary);
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform var(--transition);
+            }
+            .nav a:hover {
+                color: var(--primary);
+            }
+            .nav a:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+        .mobile-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 8px;
+            margin-left: auto;
+            margin-right: 16px;
+        }
+        @media (min-width: 768px) {
+            .mobile-toggle { display: none; }
+        }
+
+        /* Boutons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 48px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            cursor: pointer;
+            transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition), color var(--transition);
+        }
+        .btn-large {
+            padding: 14px 32px;
+            font-size: 16px;
+            min-height: 52px;
+        }
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        .btn svg {
+            transition: transform var(--transition);
+        }
+        .btn:hover svg {
+            transform: translateX(2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 180px;
+                padding-bottom: 100px;
+            }
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .hero-inner {
+                grid-template-columns: 10fr 11fr;
+                gap: 80px;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* En-tête Badge (Pill) */
+        .badge-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(176,101,60,0.2);
+            color: rgba(44, 30, 22, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        .badge-outline svg {
+            color: var(--primary);
+        }
+
+        .hero-title {
+            font-size: 42px;
+            letter-spacing: -0.02em;
+        }
+        @media (min-width: 768px) {
+            .hero-title { font-size: 52px; }
+        }
+        @media (min-width: 992px) {
+            .hero-title { font-size: 64px; }
+        }
+
+        .hero-title span {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-title svg {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            color: rgba(176,101,60,0.15);
+            z-index: -1;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: rgba(44, 30, 22, 0.75);
+            max-width: 50ch;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        @media (min-width: 768px) {
+            .hero-desc { font-size: 18px; }
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+            align-items: center;
+        }
+
+        /* Avatar Group */
+        .review-snippet {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(176,101,60,0.1);
+        }
+        .avatar-group {
+            display: flex;
+        }
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid var(--neutral);
+            background-color: #EADAC9;
+            margin-left: -12px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .avatar:first-child {
+            margin-left: 0;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .avatar.count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            color: var(--dark);
+            font-size: 11px;
+            font-weight: 700;
+            z-index: 2;
+        }
+        .review-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+            color: rgba(44, 30, 22, 0.7);
+            font-weight: 500;
+        }
+        .review-stars {
+            color: var(--accent);
+            display: flex;
+            gap: 2px;
+            margin-bottom: 2px;
+        }
+
+        /* Visuals Hero (2x2 Grid) */
+        .hero-visuals {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            align-items: center;
+            z-index: 1;
+        }
+        @media (min-width: 576px) {
+            .hero-visuals { gap: 24px; }
+        }
+
+        .hero-img-wrap {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            background-color: var(--white);
+        }
+        .hero-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-img-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Formes organiques nettes */
+        .blob-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -50%);
+            width: 110%;
+            height: 110%;
+            background-color: rgba(234, 218, 201, 0.6);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .deco-line {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            color: var(--primary);
+            opacity: 0.2;
+        }
+        .deco-line-1 {
+            top: -20px;
+            left: -40px;
+            width: 100px;
+        }
+        .deco-line-2 {
+            bottom: -40px;
+            right: -20px;
+            width: 120px;
+        }
+
+        /* Animations CSS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        /* Section Spacing */
+        .section {
+            padding: 80px 0;
+        }
+        @media (min-width: 768px) {
+            .section { padding: 120px 0; }
+        }
+        .section-light { background-color: var(--white); }
+
+        /* Title Helpers */
+        .section-label {
+            display: inline-block;
+            padding: 4px 16px;
+            border: 1px solid rgba(176,101,60,0.2);
+            border-radius: 40px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        @media (min-width: 768px) {
+            .section-title { font-size: 40px; }
+        }
+
+        /* Marquee / Ticker */
+        .marquee-wrapper {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 16px 0;
+            overflow: hidden;
+            display: flex;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 32px;
+            font-weight: 500;
+            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+        }
+        .about-visual {
+            position: relative;
+        }
+        .about-img-main {
+            border-radius: 20px;
+            width: 100%;
+            display: block;
+        }
+        .about-img-front {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 50%;
+            border-radius: 20px;
+            border: 8px solid var(--neutral);
+            box-shadow: var(--shadow);
+        }
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+        @media (min-width: 576px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .stat-card {
+            background: var(--white);
+            border: 1px solid rgba(176,101,60,0.1);
+            padding: 24px 16px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        @media (min-width: 768px) {
+            .stat-num { font-size: 28px; }
+        }
+        .stat-label {
+            font-size: 13px;
+            color: rgba(44, 30, 22, 0.7);
+            font-weight: 500;
+        }
+        /* Services Section */
+        .services-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(176,101,60,0.1);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(176,101,60,0.08);
+        }
+        .service-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        .service-content {
+            padding: 24px;
+        }
+        .service-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--neutral);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-desc {
+            font-size: 15px;
+            color: rgba(44, 30, 22, 0.7);
+            margin-bottom: 20px;
+        }
+
+        /* Why Choose Us & Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        @media (min-width: 992px) {
+            .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .benefit-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 20px;
+            border: 1px solid rgba(176,101,60,0.1);
+        }
+        @media (min-width: 768px) {
+            .benefit-card { padding: 32px; }
+        }
+        .benefit-card.bg-primary-light {
+            background: rgba(176,101,60,0.05);
+            border: none;
+        }
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--white);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+        .benefit-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .benefit-desc {
+            font-size: 15px;
+            color: rgba(44, 30, 22, 0.7);
+        }
+        
+        .benefits-large-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            min-height: 300px;
+        }
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .testimonials-grid {
+                grid-template-columns: 1.2fr 1fr;
+                gap: 80px;
+            }
+        }
+        .testimonial-card {
+            background: var(--neutral);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+        }
+        .quote-icon {
+            color: rgba(176,101,60,0.1);
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 0;
+        }
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .author-meta {
+            font-size: 13px;
+            color: rgba(44, 30, 22, 0.6);
+        }
+        
+        .testimonial-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 140px);
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .testimonial-gallery { grid-template-rows: repeat(2, 200px); }
+        }
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .gallery-img:first-child {
+            grid-row: span 2;
+            height: 100%;
+        }
+
+        /* Process Layer */
+        .process-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .process-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            border: 1px solid rgba(176,101,60,0.1);
+            position: relative;
+        }
+        @media (min-width: 576px) {
+            .process-card {
+                flex-direction: row;
+                gap: 24px;
+                padding: 32px;
+            }
+        }
+        .process-step {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: var(--primary);
+            opacity: 0.3;
+            font-weight: 700;
+            flex-shrink: 0;
+            width: 40px;
+        }
+        .process-content h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .process-content p {
+            color: rgba(44, 30, 22, 0.7);
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Results / Before After */
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        @media (min-width: 768px) {
+            .results-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .result-card {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            background: var(--white);
+            border: 1px solid rgba(176,101,60,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: transform var(--transition);
+        }
+        .result-card:hover {
+            transform: translateY(-8px);
+        }
+        .result-images {
+            display: flex;
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+        .result-images img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .result-label-before, .result-label-after {
+            position: absolute;
+            top: 16px;
+            padding: 4px 12px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
+        }
+        .result-label-before { left: 16px; }
+        .result-label-after { right: 16px; }
+        .result-content {
+            padding: 24px;
+            border-top: none;
+            border-radius: 0 0 24px 24px;
+            text-align: center;
+        }
+        .result-content h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .cert-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(176,101,60,0.1);
+            width: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .cert-icon {
+            color: var(--primary);
+            width: 48px;
+            height: 48px;
+        }
+
+        /* Blog */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        @media (min-width: 768px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid rgba(176,101,60,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-primary);
+        }
+        .blog-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-meta {
+            font-size: 13px;
+            color: rgba(44, 30, 22, 0.6);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .blog-title {
+            font-size: 22px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .blog-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            margin-top: auto;
+        }
+
+        /* Philosophy / Engagement Section */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .philosophy-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+        }
+        .philosophy-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .philosophy-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        @media (min-width: 576px) {
+            .philosophy-img { height: 240px; border-radius: 24px; }
+        }
+
+        /* CTA Split Layout */
+        .cta-banner {
+            background-color: var(--neutral);
+            border-radius: 24px;
+            padding: 48px 24px;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            border: 1px solid rgba(176,101,60,0.1);
+        }
+        @media (min-width: 768px) {
+            .cta-banner {
+                padding: 64px;
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--neutral);
+            padding: 80px 0 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+        .footer-brand {
+            max-width: 300px;
+        }
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        .footer-desc {
+            color: rgba(250, 247, 242, 0.7);
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-links a {
+            color: rgba(250, 247, 242, 0.7);
+            font-size: 15px;
+            transition: color var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        .footer-contact {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .footer-contact li {
+            display: flex;
+            gap: 12px;
+            color: rgba(250, 247, 242, 0.7);
+            font-size: 15px;
+            align-items: flex-start;
+        }
+        .footer-contact svg {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(250, 247, 242, 0.1);
+            padding-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+            color: rgba(250, 247, 242, 0.5);
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Passer au contenu principal</a>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">La Toiletterie</div>
+            
+            <button class="mobile-toggle" aria-label="Ouvrir le menu" id="mobileMenuBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <a href="#">Accueil</a>
+                <a href="#">Nos Services</a>
+                <a href="#">Notre Salon</a>
+                <a href="#">Avis</a>
+            </nav>
+            <a href="tel:0169808167" class="btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span class="desktop-only text">01 69 80 81 67</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container hero-inner">
+                
+                <div class="hero-content">
+                    <div class="animate-fade-up">
+                        <span class="badge-outline">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            La Toiletterie, Nozay
+                        </span>
+                    </div>
+                    
+                    <h1 class="hero-title animate-fade-up delay-1">
+                        Le bien-être de votre chien, <br>
+                        <span>
+                            entre de bonnes mains
+                            <svg viewBox="0 0 200 12" preserveAspectRatio="none" fill="currentColor"><path d="M0,10 C50,0 150,0 200,10 L200,12 L0,12 Z" /></svg>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-desc animate-fade-up delay-2">
+                        Offrez à votre compagnon un moment de détente absolue. Un toilettage en douceur, sans stress, avec une approche artisanale dans le respect de son poil et de sa nature.
+                    </p>
+                    
+                    <div class="hero-actions animate-fade-up delay-3">
+                        <a href="tel:0169808167" class="btn btn-large">
+                            Prendre rendez-vous
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#services" class="btn btn-large btn-outline">
+                            Découvrir le salon
+                        </a>
+                    </div>
+                    
+                    <div class="review-snippet animate-fade-up delay-4">
+                        <div class="avatar-group">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=100&q=75&fm=webp" alt="Client satisfait">
+                            </div>
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=100&q=75&fm=webp" alt="Chien client">
+                            </div>
+                            <div class="avatar count">
+                                70+
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <div class="review-stars">
+                                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                            <span>4.9/5 · 70+ avis Google</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visuals animate-fade-up delay-4">
+                    <!-- Fond radial super léger et premium -->
+                    <div class="blob-bg"></div>
+                    
+                    <!-- Lignes décoratives minimalistes -->
+                    <svg class="deco-line deco-line-1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10,90 Q30,10 90,50" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="deco-line deco-line-2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10,10 Q50,90 90,20" stroke-linecap="round"/>
+                    </svg>
+
+                    <!-- Composition 2x2 -->
+                    <div class="hero-img-wrap">
+                        <img src="https://images.pexels.com/photos/19145878/pexels-photo-19145878.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Toilettage de chien en salon" width="400" height="400">
+                    </div>
+                    <div class="hero-img-wrap">
+                        <img src="https://images.pexels.com/photos/19145880/pexels-photo-19145880.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Soins et coupe pour chien" width="400" height="400">
+                    </div>
+                    <div class="hero-img-wrap">
+                        <img src="https://images.pexels.com/photos/6131564/pexels-photo-6131564.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Toiletteuse brossant un chien" width="400" height="400">
+                    </div>
+                    <div class="hero-img-wrap">
+                        <img src="https://images.pexels.com/photos/19145879/pexels-photo-19145879.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Esthétique et douceur pour chien" width="400" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Coupe aux ciseaux
+                </div>
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Tonte minutieuse
+                </div>
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Bain et Brushing
+                </div>
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Épilation canin
+                </div>
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Coupe des griffes
+                </div>
+                <div class="marquee-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Soins des oreilles
+                </div>
+                
+                <!-- Repeat for infinite illusion -->
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Coupe aux ciseaux
+                </div>
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Tonte minutieuse
+                </div>
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Bain et Brushing
+                </div>
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Épilation canin
+                </div>
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Coupe des griffes
+                </div>
+                <div class="marquee-item" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    Soins des oreilles
+                </div>
+            </div>
+        </div>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <img src="https://images.pexels.com/photos/19145878/pexels-photo-19145878.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Toilettage de chien" class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80" alt="Toiletteuse avec un chien" class="about-img-front">
+                    </div>
+                    <div class="about-content">
+                        <span class="section-label">À propos</span>
+                        <h2 class="section-title">Le salon de bien-être pour votre compagnon</h2>
+                        <p style="margin-bottom: 24px;">
+                            Situé à Nozay, notre salon de toilettage "La Toiletterie" est né d'une passion inconditionnelle pour les animaux. Nous offrons à votre chien ou chat une parenthèse de douceur et de soins, loin du stress.
+                        </p>
+                        <p style="margin-bottom: 32px;">
+                            Chaque animal est unique, c'est pourquoi nous adaptons nos produits et nos techniques à son type de poil, sa morphologie et son caractère. Un toilettage respectueux pour un résultat impeccable.
+                        </p>
+                        
+                        <a href="#services" class="btn">En savoir plus</a>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-num">820+</span>
+                                <span class="stat-label">Chiens soignés</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">150+</span>
+                                <span class="stat-label">Clients réguliers</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">5</span>
+                                <span class="stat-label">Années d'expérience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-light" id="services">
+            <div class="container">
+                <div class="services-header">
+                    <span class="section-label">Nos Services</span>
+                    <h2 class="section-title">Ce que nous proposons</h2>
+                    <p>Découvrez notre gamme complète de soins, conçue pour répondre à tous les besoins de votre fidèle compagnon.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=600&q=80" alt="Bain relaxant" class="service-img">
+                        <div class="service-content">
+                            <h3 class="service-title">
+                                Bain & Soins Spécifiques
+                                <span class="service-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                            </h3>
+                            <p class="service-desc">Shampooings professionnels adaptés à chaque type de peau et de pelage pour nettoyer en douceur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&q=80" alt="Coupe et Stylisme" class="service-img">
+                        <div class="service-content">
+                            <h3 class="service-title">
+                                Coupe & Tonte
+                                <span class="service-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                            </h3>
+                            <p class="service-desc">Tonte ou coupe aux ciseaux selon le standard de la race et vos envies, tout en respectant l'animal.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=600&q=80" alt="Épilation" class="service-img">
+                        <div class="service-content">
+                            <h3 class="service-title">
+                                Épilation (Trimming)
+                                <span class="service-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                            </h3>
+                            <p class="service-desc">Technique indispensable pour les poils durs. Permet au nouveau poil de pousser correctement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why-us">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <span class="section-label">Pourquoi Nous Choisir ?</span>
+                    <h2 class="section-title">L'Excellence au service de votre animal</h2>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card bg-primary-light">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                        </div>
+                        <h3 class="benefit-title">Approche de Soins Douce</h3>
+                        <p class="benefit-desc">Nous favorisons le renforcement positif et la douceur pour réduire l'anxiété souvent liée au toilettage.</p>
+                    </div>
+
+                    <div class="benefit-card bg-primary-light">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"></path><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"></path></svg>
+                        </div>
+                        <h3 class="benefit-title">Produits Naturels</h3>
+                        <p class="benefit-desc">Des shampooings et soins de haute qualité, sans parabènes, respectueux de l'épiderme canin et félin.</p>
+                    </div>
+
+                    <div class="benefit-card bg-primary-light">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3 class="benefit-title">Expertise Reconnue</h3>
+                        <p class="benefit-desc">Une formation continue et diplômante pour rester à jour sur les standards de race et la cosmétologie animale.</p>
+                    </div>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3 class="benefit-title" style="font-size: 24px; margin-bottom: 24px;">Les bienfaits du toilettage professionnel</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div class="service-icon" style="flex-shrink: 0; width: 24px; height: 24px; background: rgba(176,101,60,0.1);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                                <span class="benefit-desc">Prévient les problèmes de peau et les parasites.</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div class="service-icon" style="flex-shrink: 0; width: 24px; height: 24px; background: rgba(176,101,60,0.1);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                                <span class="benefit-desc">Évite la formation de nœuds douloureux pour l'animal.</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div class="service-icon" style="flex-shrink: 0; width: 24px; height: 24px; background: rgba(176,101,60,0.1);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                                <span class="benefit-desc">Maintient l'hygiène des oreilles et des griffes.</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div class="service-icon" style="flex-shrink: 0; width: 24px; height: 24px; background: rgba(176,101,60,0.1);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                                <span class="benefit-desc">Procure une sensation de confort et de légèreté.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="grid-column: span 1;">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80" alt="Chien soigné" class="benefits-large-img">
+                    </div>
+                    <div class="benefit-card">
+                        <h3 class="benefit-title" style="font-size: 24px; margin-bottom: 24px;">Prévention Quotidienne</h3>
+                        <p class="benefit-desc" style="margin-bottom: 24px;">
+                            Un entretien régulier chez le toiletteur permet de détecter rapidement toute anomalie au niveau de la peau, des oreilles, ou d'autres problèmes de santé qui peuvent nécessiter l'intervention de votre vétérinaire.
+                        </p>
+                        <a href="tel:0169808167" class="btn btn-outline">Prendre conseil</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-light" id="testimonials">
+            <div class="container">
+                <div class="testimonials-grid">
+                    <div>
+                        <span class="section-label">Avis Clients</span>
+                        <h2 class="section-title">Ce que nos clients disent de nous</h2>
+                        <div class="testimonial-card">
+                            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                            <p class="testimonial-content">
+                                "En tant que propriétaire d'un caniche assez anxieux, j'appréhendais beaucoup le toilettage. L'équipe a fait des merveilles, avec une patience infinie. Mon chien est ressorti détendu, et la coupe était parfaite !"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">MS</div>
+                                <div class="author-info">
+                                    <span class="author-name">Marie S.</span>
+                                    <span class="author-meta">Propriétaire de Max, Caniche</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-gallery">
+                        <img src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?w=600&q=80" alt="Chien au salon" class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80" alt="Soin chien" class="gallery-img">
+                        <img src="https://images.pexels.com/photos/6131564/pexels-photo-6131564.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Relaxation chien" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section (Avant / Après) -->
+        <section class="section" id="results">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <span class="section-label">Nos Réalisations</span>
+                    <h2 class="section-title">De vrais résultats pour vos chiens</h2>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-images">
+                            <span class="result-label-before">Avant</span>
+                            <span class="result-label-after">Après</span>
+                            <img src="https://images.pexels.com/photos/19145880/pexels-photo-19145880.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien avant toilettage" style="filter: grayscale(30%);">
+                            <img src="https://images.pexels.com/photos/6131564/pexels-photo-6131564.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien après toilettage">
+                        </div>
+                        <div class="result-content">
+                            <h3>Tonte et Bain de Milo</h3>
+                            <p class="service-desc">Retrouver un pelage soyeux et démêlé.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-images">
+                            <span class="result-label-before">Avant</span>
+                            <span class="result-label-after">Après</span>
+                            <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&q=80" alt="Chien avant" style="filter: grayscale(30%);">
+                            <img src="https://images.pexels.com/photos/19145879/pexels-photo-19145879.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chien après">
+                        </div>
+                        <div class="result-content">
+                            <h3>Épilation de Charlie</h3>
+                            <p class="service-desc">Trimming dans le respect du standard de la race.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section section-light" id="process">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <span class="section-label">Comment on travaille</span>
+                    <h2 class="section-title">Notre méthode de toilettage</h2>
+                </div>
+                
+                <div class="process-list">
+                    <div class="process-card">
+                        <div class="process-step">01</div>
+                        <div class="process-content">
+                            <h3>Consultation & Évaluation</h3>
+                            <p>Nous commençons par écouter vos besoins et comprendre la condition physique et comportementale de votre animal (peurs, problèmes de peau).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-step">02</div>
+                        <div class="process-content">
+                            <h3>Plan de Soin Sur-Mesure</h3>
+                            <p>Chaque chien est unique. Nous sélectionnons les shampooings et définissons la meilleure approche technique (ciseaux, tonte, trimming).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-step">03</div>
+                        <div class="process-content">
+                            <h3>Toilettage & Suivi</h3>
+                            <p>Nous restons à l'écoute de l'animal tout au long du soin, et vous donnons des conseils pour prolonger les bienfaits à la maison.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engagement / Philosophy Section -->
+        <section class="section">
+            <div class="container">
+                <div class="philosophy-grid">
+                    <div class="philosophy-images">
+                        <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=600&q=80" alt="Bain chien" class="philosophy-img">
+                        <img src="https://images.pexels.com/photos/6131564/pexels-photo-6131564.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Brossage" class="philosophy-img">
+                        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&q=80" alt="Toilettage" class="philosophy-img">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=600&q=80" alt="Chien soigné" class="philosophy-img">
+                    </div>
+                    <div>
+                        <h2 class="section-title">Parce que votre compagnon mérite toute notre attention</h2>
+                        <p style="margin-bottom: 24px; color: rgba(44, 30, 22, 0.75); font-size: 18px;">
+                            Votre chien n'est pas qu'un client, c'est un membre à part entière de votre famille. Il a besoin de douceur, de patience, et de soins adaptés à sa véritable condition.
+                        </p>
+                        <p style="margin-bottom: 32px; color: rgba(44, 30, 22, 0.75);">
+                            À La Toiletterie, nous nous formons constamment pour rester aux faits des meilleures pratiques. Nous écoutons rigoureusement vos indications et les signaux donnés par votre animal pour qu'il reparte serein, sain et beau.
+                        </p>
+                        <a href="mailto:contact@latoiletterie-nozay.fr" class="btn">
+                            Nous contacter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <h2 class="section-title">Diplômes & Certifications</h2>
+                </div>
+                
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2-2-4 4 4-4-2-2"></path><circle cx="12" cy="12" r="10"></circle><path d="M12 9v2"></path><path d="M12 15h.01"></path></svg>
+                        <h4 style="font-family: 'Playfair Display', serif; font-size: 18px;">Brevet National de Toiletteur Canin</h4>
+                        <p class="service-desc" style="margin: 0; font-size: 14px;">Certifié par l'Assemblée des Chambres de Métiers</p>
+                    </div>
+                    <div class="cert-card">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <h4 style="font-family: 'Playfair Display', serif; font-size: 18px;">Cosmétologie Animale Avancée</h4>
+                        <p class="service-desc" style="margin: 0; font-size: 14px;">Formation validée - Spécialisation Peaux Sensibles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="section section-light" id="blog">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px;">
+                    <div>
+                        <span class="section-label">Actualités</span>
+                        <h2 class="section-title" style="margin-bottom: 0;">Nos derniers conseils</h2>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="min-height: 44px; padding: 10px 24px;">Voir tous les articles</a>
+                </div>
+                
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80" alt="Chien" class="blog-img">
+                        <div class="blog-content">
+                            <span class="blog-meta">Par Jeanne · 28 Septembre 2026</span>
+                            <h3 class="blog-title">Comment bien entretenir le poil de votre chien entre deux rendez-vous ?</h3>
+                            <a href="#" class="blog-link">
+                                Lire l'article
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=600&q=80" alt="Chien dans l'eau" class="blog-img">
+                        <div class="blog-content">
+                            <span class="blog-meta">Par Jeanne · 14 Septembre 2026</span>
+                            <h3 class="blog-title">Les signes qui montrent que votre animal a besoin d'un bain professionnel</h3>
+                            <a href="#" class="blog-link">
+                                Lire l'article
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="cta-banner">
+                    
+                    <div style="position: absolute; top: -20%; right: -10%; width: 50%; aspect-ratio: 1; background: var(--white); border-radius: 50%; pointer-events: none; opacity: 0.5;"></div>
+                    
+                    <div style="position: relative; z-index: 2;">
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(40px, 8vw, 72px); line-height: 1.1; color: var(--primary); margin-bottom: 24px; text-transform: uppercase;">
+                            Prenez<br>Rendez-Vous<span style="color: var(--accent);">*</span>
+                        </h2>
+                        <p style="font-size: 18px; color: rgba(44, 30, 22, 0.7); margin-bottom: 32px; max-width: 400px;">
+                            Offrez à votre animal un moment de bien-être exceptionnel. Nous avons hâte de le rencontrer.
+                        </p>
+                        <a href="tel:0169808167" class="btn btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            Appeler le 01 69 80 81 67
+                        </a>
+                    </div>
+                    
+                    <div style="position: relative; z-index: 2; display: flex; justify-content: center; align-items: flex-end; height: 100%;">
+                        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=600&q=80" alt="Chien heureux" style="border-radius: 24px; width: 100%; max-width: 350px; object-fit: cover; aspect-ratio: 4/5; box-shadow: var(--shadow);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">La Toiletterie</span>
+                    <p class="footer-desc">
+                        Salon de toilettage artisanal à Nozay spécialisé dans le bien-être animal. Soins, bain, coupe et épilation.
+                    </p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#" style="color: var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" style="color: var(--white);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Nos Services</a></li>
+                        <li><a href="#why-us">Pourquoi Nous ?</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>15 Rue de l'Église<br>91620 Nozay</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:0169808167">01 69 80 81 67</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:contact@latoiletterie-nozay.fr">contact@latoiletterie-nozay.fr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Toiletterie. Tous droits réservés.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#" style="color: rgba(250, 247, 242, 0.5); font-size: 13px;">Mentions légales</a>
+                    <a href="#" style="color: rgba(250, 247, 242, 0.5); font-size: 13px;">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Logique UI minimaliste native 
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnText = document.querySelector('.desktop-only');
+            const header = document.getElementById('header');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            // Toggle menu mobile
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                });
+            }
+            
+            // Adaptation conditionnelle du texte d'appel sur mobile
+            const updateMobileText = () => {
+                if(window.innerWidth < 576 && btnText) {
+                    btnText.textContent = "Appeler";
+                } else if (btnText) {
+                    btnText.textContent = "01 69 80 81 67";
+                }
+            };
+            
+            // Effet subtil sur le header au scroll
+            const onScroll = () => {
+                if(window.scrollY > 20) {
+                    header.style.padding = "10px 0";
+                    header.style.boxShadow = "0 4px 20px rgba(44, 30, 22, 0.05)";
+                } else {
+                    header.style.padding = "16px 0";
+                    header.style.boxShadow = "none";
+                }
+            };
+            
+            updateMobileText();
+            window.addEventListener('resize', updateMobileText);
+            window.addEventListener('scroll', onScroll, { passive: true });
+        });
+    </script>
+</body>
+</html>
